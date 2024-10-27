@@ -3,7 +3,7 @@ const { getUserDetails, updateUserDetails } = require('../controllers/userContro
 const authMiddleware = require('../midddleware/authMiddleware');
 const router = express.Router();
 
-router.use(authMiddleware); // Protect all user routes
+router.use(authMiddleware); 
 
 router.get('/me', getUserDetails);
 router.put('/me', updateUserDetails);
